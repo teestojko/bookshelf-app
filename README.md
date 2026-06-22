@@ -7,6 +7,8 @@
 ```
 echo "alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'" >> ~/.zshrc
 ```
+（「.zshrc」ファイルに「alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'」が追加される）
+
 を実行して、「.zshrc」ファイルに追加後、プロジェクトのルートディレクトリに移動して、
 ```
 source ~/.zshrc
@@ -17,4 +19,3 @@ sail npm install
 ```
 を実行する
 
-（「.zshrc」ファイルに「alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'」が追加される）
