@@ -20,6 +20,10 @@ sail npm install
 ```
 を実行する
 
+### fortify導入の前にアプリケーションキーの作成
+```
+sail artisan key:generate
+```
 
 ### Vite開発サーバーの起動
 ```
