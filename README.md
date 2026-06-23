@@ -3,6 +3,7 @@
 ## 環境構築：ポイント
 
 ### sail npm installが実行できない場合
+
 ・sailコマンドをプロジェクトのルートディレクトリで実行する為には、ユーザーのホームディレクトリ「Macの場合：「〜 ％」」で、
 ```
 echo "alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'" >> ~/.zshrc
@@ -18,4 +19,11 @@ source ~/.zshrc
 sail npm install
 ```
 を実行する
+
+
+### Vite開発サーバーの起動
+```
+sail npm run dev
+```
+注意: 開発中は常にこのコマンドを実行した状態にしておいてください。
 
