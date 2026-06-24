@@ -35,6 +35,10 @@ class RouteServiceProvider extends ServiceProvider
 
             Route::middleware('web')
                 ->group(base_path('routes/web.php'));
+
+            // 認証関連の独自ルートをwebミドルウェア配下で読み込む
+            Route::middleware('web')
+                ->group(base_path('routes/auth.php'));
         });
     }
 }

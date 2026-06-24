@@ -12,7 +12,6 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\RateLimiter;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Str;
-use Laravel\Fortify\Actions\RedirectIfTwoFactorAuthenticatable;
 use Laravel\Fortify\Fortify;
 use Laravel\Fortify\Contracts\CreatesNewUsers;
 use Laravel\Fortify\Contracts\LogoutResponse as LogoutResponseContract;
@@ -53,14 +52,13 @@ class FortifyServiceProvider extends ServiceProvider
             return Limit::perMinute(5)->by($throttleKey);
         });
 
-        // ログインフォームのビューを指定
         Fortify::loginView(function () {
             return view('auth.login');
         });
 
-        // ユーザー登録フォームのビューを指定
         Fortify::registerView(function () {
             return view('auth.register');
         });
+
     }
 }
